@@ -9,15 +9,22 @@
 
 #define COLD   0x010 // 16 한묶음 
 #define POISON 0x020 //32는 16 두묶음
-#define POISON 0x040 
-#define POISON 0x080 
+// #define POISON 0x040 
+// #define POISON 0x080 
 
-#define POISON 0x100 
-#define POISON 0x200
-#define POISON 0x400
-#define POISON 0x800
+// #define POISON 0x100 
+// #define POISON 0x200
+// #define POISON 0x400
+// #define POISON 0x800
  
 
+// 전역변수
+int global = 0;
+
+
+int Add(int left, int right) {
+    return left + right;
+}
 
 
 
@@ -132,7 +139,7 @@ int main() {
     }
 
     // switch case
-    int iTest = 20;
+    
     switch (iTest) {
         
         case 10:
@@ -193,6 +200,27 @@ int main() {
     // 4. 1111 0111 Status
     //    1111 1101 THIRSTY 반전 > 비트곱
     //    1111 0101 결과
+
+
+    // 변수
+    // 1. 지역변수
+    int iName = 0;
+    // {}안에 선언된 변수 (함수, 지역)
+    {
+        // 변수명 규칙
+        int iName = 100;
+        iName;
+    }
+    
+    // 2. 전역변수
+    
+    // 3. 정적변수
+    
+    // 4. 외부변수
+
+    // 함수
+    data = Add(10,20);
+
 
 
     return 0;
